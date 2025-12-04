@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Developer Portfolio{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My Developer Portfolio</h1>
+        <nav>
+            <a href="/">Home</a>
+            <!-- Later we’ll add: <a href="/projects">Projects</a>, etc. -->
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Default content if a child template doesn’t override this -->
+        <p>Content goes here.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; {{ 2025 }} Abrahan - All rights reserved.</p>
+    </footer>
+</body>
+</html>
