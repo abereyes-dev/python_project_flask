@@ -4,27 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}My Developer Portfolio{% endblock %}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header h1 {
+            margin-bottom: 0;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <h1>My Developer Portfolio</h1>
         <nav>
             <a href="/">Home</a>
-            <!-- Later we’ll add: <a href="/projects">Projects</a>, etc. -->
+            <!-- Future links: <a href="/projects">Projects</a> -->
         </nav>
         <hr>
     </header>
 
     <main>
         {% block content %}
-        <!-- Default content if a child template doesn’t override this -->
-        <p>Content goes here.</p>
         {% endblock %}
     </main>
 
     <footer>
         <hr>
-        <p>&copy; {{ 2025 }} Abrahan - All rights reserved.</p>
+        <p>&copy; 2025 Abe Reyes</p>
     </footer>
 </body>
 </html>
